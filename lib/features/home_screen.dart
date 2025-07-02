@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Image.asset('assets/images/Image.png'),
+            Image.asset('assets/images/image.png'),
             SizedBox(height: 16),
             Text('Apple Unveils Revolutionary AI Features'),
             SizedBox(height: 12.h),
