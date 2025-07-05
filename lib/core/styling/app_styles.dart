@@ -5,6 +5,24 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:network_test/core/styling/app_colors.dart';
 
 class AppStyles {
+  static TextStyle inter12w400 = GoogleFonts.inter(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.black,
+  );
+
+  static TextStyle inter14w600 = GoogleFonts.inter(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.black,
+  );
+
+  static TextStyle inter18w600 = GoogleFonts.inter(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.black,
+  );
+
   static TextStyle onBoardingTitleStyle = GoogleFonts.inter(
     fontSize: 32.sp,
     fontWeight: FontWeight.w700,
