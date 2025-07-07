@@ -15,46 +15,48 @@ class _CategoriesSectionState extends State<CategoriesSection> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      physics: const BouncingScrollPhysics(),
-      padding: EdgeInsets.zero,
-      scrollDirection: Axis.horizontal,
-      itemCount: widget.categories.length,
-      itemBuilder: (BuildContext context, int index) {
-        return Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            InkWell(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              child: Container(
-                width: 100.w,
-                height: 32.h,
-                decoration: BoxDecoration(
-                  color:
-                      selectedIndex == index
-                          ? AppColors.brandBlue
-                          : Colors.white,
-                  borderRadius: BorderRadius.circular(56.r),
-                ),
-                child: Center(
-                  child: Text(
-                    widget.categories[index],
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
+    return Padding(
+      padding: EdgeInsetsDirectional.only(start: 32.w),
+      child: SizedBox(
+        height: 40.h,
+        child: ListView.builder(
+          physics: const BouncingScrollPhysics(),
+          padding: EdgeInsets.zero,
+          scrollDirection: Axis.horizontal,
+          itemCount: widget.categories.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: AppColors.brandBlue,
+                        width: 1.w,
+                      ),
+                      borderRadius: BorderRadius.circular(56.r),
+                      color: Colors.transparent,
+                    ),
+                    child: Center(
+                      child: Text(
+                        widget.categories[index],
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(width: 36.w),
-          ],
-        );
-      },
+                SizedBox(width: 36.w),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 }
