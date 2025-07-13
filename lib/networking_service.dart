@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 
 class NetworkingService {
@@ -9,6 +7,5 @@ class NetworkingService {
     final response = await dio.get(
       'https://jsonplaceholder.typicode.com/posts',
     );
-    log(response.data.toString());
   }
 }

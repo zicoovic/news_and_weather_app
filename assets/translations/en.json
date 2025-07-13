@@ -10,5 +10,8 @@
     "home": "Home",
     "notifications": "Notifications",
     "profile": "Profile",
-    "settings": "Settings"
+    "settings": "Settings",
+    "no_result": "No Results Found",
+    "error": "An error occurred, please try again later.",
+    "Unknown": "Unknown"
 }

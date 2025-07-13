@@ -33,10 +33,33 @@ class ArticleCardWidget extends StatelessWidget {
                 SizedBox(height: 8.h),
                 SizedBox(
                   width: 238.w,
-                  child: Text(title, style: AppStyles.inter18w600),
+                  child: Text(
+                    title,
+                    style: AppStyles.inter18w600.copyWith(
+                      overflow: TextOverflow.ellipsis,
+                      // height: 1.2,
+                    ),
+                  ),
                 ),
                 SizedBox(height: 4.h),
-                Text('$authorName - $date', style: AppStyles.inter12w400),
+                Row(
+                  children: [
+                    Text(
+                      '$authorName - '.split(
+                        ',',
+                      )[0], // Display only the date part'),
+                      style: AppStyles.inter12w400.copyWith(
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    Text(
+                      ' $date',
+                      style: AppStyles.inter12w400.copyWith(
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
                 SizedBox(height: 24.h),
               ],
             ),
@@ -50,6 +73,7 @@ class ArticleCardWidget extends StatelessWidget {
               imageUrl:
                   imageUrl ??
                   "https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg",
+
               placeholder:
                   (context, url) => Center(
                     child: CircularProgressIndicator(),

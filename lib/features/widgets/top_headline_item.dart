@@ -42,9 +42,21 @@ class TopHeadlineItem extends StatelessWidget {
         const SizedBox(height: 16),
         Text(title, style: AppStyles.inter18w600),
         const SizedBox(height: 12),
-        Text(
-          '$authorName- $date',
-          style: TextStyle(fontWeight: FontWeight.w400, fontSize: 12),
+        Row(
+          children: [
+            Text(
+              '$authorName - '.split(',')[0], // Display only the date part'),
+              style: AppStyles.inter12w400.copyWith(
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Text(
+              ' $date',
+              style: AppStyles.inter12w400.copyWith(
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
         ),
       ],
     );
