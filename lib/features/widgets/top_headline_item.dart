@@ -3,18 +3,21 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:network_test/core/styling/app_styles.dart';
+import 'package:network_test/features/home_screen/models/top_headline_model.dart';
 
 class TopHeadlineItem extends StatelessWidget {
   final String? imageUrl;
   final String title;
   final String authorName;
   final String date;
+  final Article? article;
   const TopHeadlineItem({
     super.key,
     this.imageUrl,
     required this.title,
     required this.authorName,
     required this.date,
+    this.article,
   });
 
   @override
